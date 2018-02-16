@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context="com.example.ejer1_final.MainActivity"
+    android:background="@color/colorOrangeWhite"
+    >
+
+
+    <LinearLayout
+        android:id="@+id/llCabecera"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal"
+        android:background="@drawable/fonfo_cabecera">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/restaurante"
+            />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnReservar"
+                    android:text="Reservar"
+                    android:layout_margin="10dp"
+                    style="@style/EstiloBoton"
+                    android:onClick="clickAmReservar"/>
+
+                <Button
+                    android:id="@+id/btnVerReservas"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:text="Ver Reservas"
+                    android:layout_margin="10dp"
+                    style="@style/EstiloBoton"
+                    android:onClick="clickAmVerReservas"/>
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:background="@drawable/fondo_naranja_claro"
+            >
+
+            <TextView
+                android:id="@+id/tvApp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mi APP"
+                android:layout_gravity="center_vertical"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:textColor="@color/colorWhite"
+                />
+
+            <Button
+                android:id="@+id/btnMasInfo"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@id/tvApp"
+                android:text="Mas Info."
+                android:layout_margin="10dp"
+                android:textStyle="bold"
+                android:background="@drawable/boton_redondo_blanco"
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
