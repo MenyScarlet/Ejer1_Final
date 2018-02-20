@@ -5,13 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.ejer1_final.ListReservaActivity">
+    tools:context="com.example.ejer1_final.ListReservaActivity"
+    android:background="@color/colorOrangeWhite">
 
     <LinearLayout
         android:id="@+id/llCabecera"
         android:layout_width="match_parent"
         android:layout_height="120dp"
-        android:background="@drawable/fondo_naranja_claro"
+        android:background="@drawable/fonfo_cabecera"
         android:gravity="center"
         android:orientation="horizontal">
 
@@ -24,8 +25,48 @@
             />
     </LinearLayout>
 
-    <ListView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:id="@+id/IrTvNombre"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            style="@style/EstiloEncabezadoLv"
+            android:text="Nombre: "/>
+
+        <TextView
+            android:id="@+id/IrTvHora"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:textAlignment="center"
+            style="@style/EstiloEncabezadoLv"
+            android:text="Hora:"/>
+
+        <TextView
+            android:id="@+id/IrTvDia"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:textAlignment="center"
+            style="@style/EstiloEncabezadoLv"
+            android:text="Dia: "/>
+
+        <TextView
+            android:id="@+id/IrTvPersonas"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:textAlignment="center"
+            style="@style/EstiloEncabezadoLv"
+            android:text="Num:"/>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/AlrLvReservas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

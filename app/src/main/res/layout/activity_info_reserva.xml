@@ -5,7 +5,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.ejer1_final.InfoReservaActivity">
+    tools:context="com.example.ejer1_final.InfoReservaActivity"
+    android:background="@color/colorOrangeWhite">
+
+    <LinearLayout
+        android:id="@+id/llCabecera"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal"
+        android:background="@drawable/fonfo_cabecera">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/restaurante"
+            />
+    </LinearLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -27,12 +44,10 @@
                     android:layout_height="wrap_content"
                     android:text="Confirme los datos de su reserva:" />
 
-                <EditText
-                    android:id="@+id/editText"
+                <TextView
+                    android:id="@+id/AirTvDatosReserva"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="textMultiLine" />
+                    android:layout_height="wrap_content" />
 
             </LinearLayout>
         </ScrollView>
@@ -41,14 +56,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:gravity="center">
 
             <Button
                 android:id="@+id/btnAceptar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Aceptar" />
+                android:text="Aceptar"
+                android:onClick="clickAirAceptar"
+                style="@style/EstiloBoton"/>
         </LinearLayout>
 
     </RelativeLayout>

@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.ejer1_final.ReservaActivity">
+    tools:context="com.example.ejer1_final.ReservaActivity"
+    android:background="@color/colorOrangeWhite">
 
     <LinearLayout
         android:id="@+id/llCabecera"
@@ -81,7 +82,7 @@
 
                 <Spinner
                     android:id="@+id/ArSpDia"
-                    android:layout_width="80dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1" />
 
@@ -95,7 +96,7 @@
 
                 <Spinner
                     android:id="@+id/ArSpHora"
-                    android:layout_width="80dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1" />
 
@@ -108,7 +109,7 @@
                     style="@style/EstiloTextView"/>
 
                 <EditText
-                    android:id="@+id/etObservaciones"
+                    android:id="@+id/ArEtObservaciones"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -131,7 +132,9 @@
                 android:layout_weight="1"
                 android:duplicateParentState="false"
                 android:text="Reservar"
-                android:onClick="clickArReservar"/>
+                android:onClick="clickArReservar"
+                android:layout_margin="10dp"
+                style="@style/EstiloBoton"/>
         </LinearLayout>
 
     </RelativeLayout>
