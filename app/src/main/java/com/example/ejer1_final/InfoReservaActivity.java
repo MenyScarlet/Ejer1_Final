@@ -28,6 +28,8 @@ public class InfoReservaActivity extends AppCompatActivity {
                     "\nDia: "+ p.getDia() +
                     "\nHora: " + p.getHora() +
                     "\nObservaciones: " + p.getObservacion());
+
+            tvDatosReserva.setText(b.getString("RESERVA"));
         }
 
     }//FIN onCreate

@@ -4,7 +4,8 @@
     android:layout_height="wrap_content"
     android:background="@drawable/boton_fondo_amarillo"
     android:gravity="center_vertical"
-    android:padding="5dp">
+    android:padding="5dp"
+    >
 
     <TextView
         android:id="@+id/IrTvNombre"
