@@ -7,9 +7,8 @@ import android.view.View;
 import android.widget.TextView;
 
 public class InfoReservaActivity extends AppCompatActivity {
-
     TextView tvDatosReserva;
-
+    static final String EXTRA_DATOS_RESERVA = "DATOSRESERVA";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,7 +19,7 @@ public class InfoReservaActivity extends AppCompatActivity {
         Bundle b = getIntent().getExtras();
         if (b!=null){
 
-            ParceableReservaActivity p = b.getParcelable(ReservaActivity.EXTRA_DATOS_RESERVA);
+            Reserva p = b.getParcelable(EXTRA_DATOS_RESERVA);
 
             tvDatosReserva.setText(
                     "Nombre: " + p.getNombre() +
@@ -29,7 +28,7 @@ public class InfoReservaActivity extends AppCompatActivity {
                     "\nHora: " + p.getHora() +
                     "\nObservaciones: " + p.getObservacion());
 
-            tvDatosReserva.setText(b.getString("RESERVA"));
+
         }
 
     }//FIN onCreate

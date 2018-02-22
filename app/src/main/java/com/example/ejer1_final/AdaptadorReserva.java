@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import com.example.ejer1_final.ArrayLvReservas;
+import com.example.ejer1_final.Reserva;
 import com.example.ejer1_final.R;
 
 import java.util.ArrayList;
@@ -19,11 +19,11 @@ import java.util.ArrayList;
  * Created by Melania on 20/02/2018.
  */
 
-public class AdaptadorReserva extends ArrayAdapter<ArrayLvReservas> {
-    ArrayList<ArrayLvReservas> reservas;
+public class AdaptadorReserva extends ArrayAdapter<Reserva> {
+    ArrayList<Reserva> reservas;
     Context c;
 
-    public AdaptadorReserva(Context c, ArrayList<ArrayLvReservas> reservas) {
+    public AdaptadorReserva(Context c, ArrayList<Reserva> reservas) {
         super(c, R.layout.item_reservas, reservas);
         this.c = c;
         this.reservas = reservas;
@@ -49,7 +49,7 @@ public class AdaptadorReserva extends ArrayAdapter<ArrayLvReservas> {
         tvDia.setText(reservas.get(position).getDia());
 
         TextView tvPersonas = (TextView)item.findViewById(R.id.IrTvPersonas);
-        tvPersonas.setText(reservas.get(position).getPersona());
+        tvPersonas.setText(""+reservas.get(position).getPersona());
 
         return item;
     }

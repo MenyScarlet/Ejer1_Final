@@ -7,7 +7,7 @@ import android.os.Parcelable;
  * Created by DIDACT on 20/02/2018.
  */
 
-public class ParceableReservaActivity implements Parcelable {
+public class Reserva implements Parcelable {
 
     //Atributos
 
@@ -19,7 +19,7 @@ public class ParceableReservaActivity implements Parcelable {
 
     //Constructor
 
-    public ParceableReservaActivity(String nombre, int persona, String dia, String hora, String observacion) {
+    public Reserva(String nombre, int persona, String dia, String hora, String observacion) {
         this.nombre = nombre;
         this.persona = persona;
         this.dia = dia;
@@ -27,23 +27,23 @@ public class ParceableReservaActivity implements Parcelable {
         this.observacion = observacion;
     }
 
-    public ParceableReservaActivity (Parcel p){
+    public Reserva(Parcel p){
         readFromParcel(p);
     }
 
     //CREATOR
 
-    public static final Creator<ParceableReservaActivity> CREATOR = new
-            Creator<ParceableReservaActivity>() {
+    public static final Creator<Reserva> CREATOR = new
+            Creator<Reserva>() {
 
         @Override
-        public ParceableReservaActivity createFromParcel(Parcel in) {
-            return new ParceableReservaActivity(in);
+        public Reserva createFromParcel(Parcel in) {
+            return new Reserva(in);
         }
 
         @Override
-        public ParceableReservaActivity[] newArray(int size) {
-            return new ParceableReservaActivity[size];
+        public Reserva[] newArray(int size) {
+            return new Reserva[size];
         }
     };
 

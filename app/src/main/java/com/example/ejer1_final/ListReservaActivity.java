@@ -11,9 +11,9 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 public class ListReservaActivity extends AppCompatActivity {
-
+    static final String EXTRA_DATOS_RESERVA = "DATOSRESERVA";
     ListView lvReservas;
-    ArrayList<ArrayLvReservas> lista_reservas = new ArrayList<>();
+    ArrayList<Reserva> lista_reservas = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,9 +29,10 @@ public class ListReservaActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
+                Reserva r =((Reserva)adapterView.getItemAtPosition(i));
                 Intent intent = new Intent(getApplicationContext(), InfoReservaActivity.class);
 
-                intent.putExtra("RESERVA", lvReservas.getItemAtPosition(i).toString());
+                intent.putExtra(EXTRA_DATOS_RESERVA, r);
 
                 startActivity(intent);
             }
@@ -42,12 +43,13 @@ public class ListReservaActivity extends AppCompatActivity {
 
     private void cargarDatos(){
 
-        lista_reservas.add(new ArrayLvReservas("Ricardo","15:00", "Viernes", 3));
-        lista_reservas.add(new ArrayLvReservas("Lorena","15:30", "Lunes", 6));
-        lista_reservas.add(new ArrayLvReservas("Maria","16:00", "Martes", 3));
-        lista_reservas.add(new ArrayLvReservas("Vicente","16:30", "Miercoles", 8));
-        lista_reservas.add(new ArrayLvReservas("Alonso","14:00", "Sabado", 2));
-        lista_reservas.add(new ArrayLvReservas("Macarena","14:30", "Lunes", 5));
+        lista_reservas.add(new Reserva("Ricardo",1,"15:00", "Viernes", ""));
+        lista_reservas.add(new Reserva("Ricardo",1,"15:00", "Viernes", ""));
+        lista_reservas.add(new Reserva("Ricardo",1,"15:00", "Viernes", ""));
+        lista_reservas.add(new Reserva("Ricardo",1,"15:00", "Viernes", ""));
+        lista_reservas.add(new Reserva("Ricardo",1,"15:00", "Viernes", ""));
+        lista_reservas.add(new Reserva("Ricardo",1,"15:00", "Viernes", ""));
+
 
 
 

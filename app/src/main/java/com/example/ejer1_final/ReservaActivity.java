@@ -61,7 +61,7 @@ public class ReservaActivity extends AppCompatActivity {
 
             if (numPersonas > 0 && numPersonas < 20){
 
-                ParceableReservaActivity datosReserva = new ParceableReservaActivity(nombre, numPersonas,
+                Reserva datosReserva = new Reserva(nombre, numPersonas,
                         diaSelec, horaSelec, observacion);
 
                 Intent i = new Intent(getApplicationContext(), InfoReservaActivity.class);
